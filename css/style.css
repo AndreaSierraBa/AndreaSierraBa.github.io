@@ -1,14 +1,14 @@
 /*font-family: 'Yatra One', cursive;
-font-family: 'Josefin Sans', sans-serif;
-*/
+font-family: 'Josefin Sans', sans-serif;*/
 
+/*Aqui se define el ancho*/
 #contenidos{width: 1000px;
 height: auto;
 margin: auto;
 position: relative;
 }
 
-/*ETIQUETAS*/
+/*Aqui se define el fondo*/
 body{
 background-color: #fff; 
 background-image: 
@@ -17,6 +17,7 @@ linear-gradient(#eee .1em, transparent .1em);
 background-size: 100% 1.2em;
 }
 
+/*Aqui se define el Titulo*/
 h1{font-family: 'Josefin Sans', sans-serif;
 color: black;
 margin-left: 10px;
@@ -24,6 +25,7 @@ font-size: 50px;
 text-align: right; 
 }
 
+/*Aqui se define el subtitulo*/
 h2{
 font-family: 'Yatra One', cursive;
 color: black;
@@ -32,72 +34,16 @@ font-size: 20px;
 text-align: right; 
 }
 
+/*Aqui se define el texto del Footer*/
 h3{
 font-family: 'Josefin Sans', sans-serif;
-color: black;
+color: white;
+text-shadow: 0 2px 1px rgba(0,0,0,0.5);
 font-size: 30px;
 text-align: center; 
 }
 
-h4{
-font-family: 'Yatra One', cursive;
-color: black;
-margin-left: 10px;
-font-size: 20px;
-text-align: left; 
-}
-
-header{width: 1000px;
-height: 120 px;
-background: rgba(255, 255, 255, 10,70);
-}
-
-nav{
-font-family: 'Josefin Sans', sans-serif;
-font-size: 20PX;
-width: 1000px;
-height: 50px;
-background: #006680;
-border-radius: 10px;
-}
-
-ul{
-margin: auto;
-padding-top: 4px;
-}
-
-li{float: left;
-list-style-type: none;
-padding: 10px;
-margin: 3px;
-}
-
-#sectionarti{
-	width: 700px;
-	height: 600px;
-	float: left;
-	margin-top: 20px;
-	border-radius: 10px;
-}
-aside{
-	width: 280px;
-	height: 600px;
-	float: left;
-	margin-left: 20px;
-	margin-top: 20px;
-	border-radius: 10px;
-}
-
-footer{
-width: 1000px;
-height: 70px;
-background: #006680;
-float: left;
-margin-top: 20px;
-border-radius: 10px;
-margin-bottom: 20px;
-}
-
+/*Aca se define el texto del articulo*/
 p{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 15px;
@@ -107,35 +53,149 @@ p{
 	text-align: justify;
 }
 
-
-aside #asidesection {
-    margin: 22px 0 0 22px;
-    padding: 11px 22px;
-    border-radius: 11px;
-}
-
-aside #asidesection ul {
-    margin: 0 0 0 22px;
-    list-style: none;
-}
-
-aside #asidesection ul li a {
+/*Barra de navegacion*/
+#navigation li {
+	font-family: 'Josefin Sans', sans-serif;
+	list-style: none;
     display: block;
-    text-decoration: none;
-    color: #000;
+    float: left;
+    margin: 1em;
 }
 
-aside #asidesection ul li a:hover {
-    text-decoration: underline;
+#navigation li a {
+        text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+        display: block;
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 1.6em;
+        margin: 0 .5em;
+}
+
+#navigation li a:hover {
+	margin-top: 2px;
+}
+
+#navigation_container {
+   margin: 0 auto;
+   width: 960px;
+}
+
+.rectangle {
+   background: #006680;
+   height: 62px;
+   position: relative;
+   box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+   border-radius: 3px;
+   z-index: 500; /* the stack order: foreground */
+   margin: 3em 0;
+}
+
+.l-triangle-top {
+   border-color: #006680 transparent transparent;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: left;
+   top: 1px;
+   left: -50px;
+}
+ 
+.l-triangle-bottom {
+   border-color: transparent transparent #006680;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: left;
+   top: -40px;
+   left: -150px;
+}
+
+.r-triangle-top {
+   border-color: #006680 transparent transparent;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: right;
+   right: -45px;
+   top: -107px;
+}
+ 
+.r-triangle-bottom {
+   border-color: transparent transparent #006680;
+   border-style:solid;
+   border-width:50px;
+   height:0px;
+   width:0px;
+   position: relative;
+   float: right;
+   top: -149px;
+   right: -145px;
+}
+
+/*Estilo botones sociales*/
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+.social ul {
+	list-style: none;
+}
+ 
+.social ul li a {
+	display: inline-block;
+	color:#fff;
+	background: #000;
+	padding: 10px 15px;
+	text-decoration: none;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+ 
+.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-twitter {background: #00abf0;}
+.social ul li .icon-googleplus {background: #d95232;}
+.social ul li .icon-pinterest {background: #ae181f;}
+.social ul li .icon-mail {background: #666666;}
+ 
+.social ul li a:hover {
+	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 }
 
 
-/*CLASES*/
+/*Se define la ubicacion y tamaño de la seccion*/
+#sectionarti{
+	width: 700px;
+	height: 600px;
+	float: left;
+	margin-top: 20px;
+	border-radius: 10px;
+}
 
-.ancho_menu_home{width: 900px;}
-.ancho_menu_paginas{width: 970px;}
+aside{
+	width: 280px;
+	height: 600px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
 
-.menu:link{color: white; text-decoration: none;}
-.menu:visited{color: black; text-decoration: none;}
-.menu:hover{color: white; text-decoration: none; text-shadow: 0 0 13px white;}
-.menu:active{color: white; text-decoration: none;}
+/*Se define el footer*/
+footer{
+width: 1000px;
+height: 70px;
+background: #006680;
+float: left;
+margin-top: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
